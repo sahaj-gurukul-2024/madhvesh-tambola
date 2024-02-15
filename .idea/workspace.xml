@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1045228b-65af-4687-b8a1-6bab8cbdb419" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Game.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Game.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/kotlin/TambolaTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/TambolaTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -16,6 +18,16 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view />
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -41,8 +53,7 @@
   "keyToString": {
     "Gradle.Build Tambola.executor": "Run",
     "Gradle.Build madhvesh-tambola.executor": "Run",
-    "Gradle.TambolaTest.check for Early 5 row claim as False in ticket.executor": "Debug",
-    "Gradle.TambolaTest.check for Early 5 row claim as True in ticket.executor": "Run",
+    "Gradle.TambolaTest.check for Early 5 row claim as False in ticket.executor": "Run",
     "Gradle.TambolaTest.check for top row claim in ticket.executor": "Debug",
     "Gradle.TambolaTest.executor": "Run",
     "Kotlin.MainKt.executor": "Run",
@@ -68,30 +79,6 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;TambolaTest.check for Early 5 row claim as False in ticket&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="TambolaTest.check for Early 5 row claim as True in ticket" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;TambolaTest.check for Early 5 row claim as True in ticket&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -135,7 +122,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.TambolaTest.check for Early 5 row claim as True in ticket" />
         <item itemvalue="Gradle.TambolaTest.check for Early 5 row claim as False in ticket" />
         <item itemvalue="Gradle.TambolaTest.check for top row claim in ticket" />
         <item itemvalue="Kotlin.MainKt" />
@@ -159,5 +145,16 @@
       <updated>1707973174039</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

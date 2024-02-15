@@ -35,7 +35,18 @@ class TambolaTest {
         //act
         val ticket = Ticket(ticketValues)
         val booleanValue = game.validate(ticket, announcedNumbers, claim)
-        //
+        //assert
+        assertTrue(booleanValue)
+    }
+    @Test
+    fun `check for Middle Row claim as True in ticket`(){
+        //arrange
+        val announcedNumbers = listOf(7, 23, 38, 52, 80)
+        val claim = "Middle Row"
+        //act
+        val ticket = Ticket(ticketValues)
+        val booleanValue = game.validate(ticket, announcedNumbers, claim)
+        //assert
         assertTrue(booleanValue)
     }
 
@@ -47,7 +58,7 @@ class TambolaTest {
         //act
         val ticket = Ticket(ticketValues)
         val booleanValue = game.validate(ticket, announcedNumbers, claim)
-        //
+        //assert
         assertTrue(booleanValue)
     }
     @Test
@@ -58,7 +69,7 @@ class TambolaTest {
         //act
         val ticket = Ticket(ticketValues)
         val booleanValue = game.validate(ticket, announcedNumbers, claim)
-        //
+        //assert
         assertFalse(booleanValue)
     }
     @Test
@@ -69,7 +80,18 @@ class TambolaTest {
         //act
         val ticket = Ticket(ticketValues)
         val booleanValue = game.validate(ticket, announcedNumbers, claim)
-        //
+        //assert
+        assertFalse(booleanValue)
+    }
+    @Test
+    fun `check for Middle Row claim as False in ticket`(){
+        //arrange
+        val announcedNumbers = listOf(7, 23, 38, 52, 80, 48)
+        val claim = "Middle Row"
+        //act
+        val ticket = Ticket(ticketValues)
+        val booleanValue = game.validate(ticket, announcedNumbers, claim)
+        //assert
         assertFalse(booleanValue)
     }
     @Test
@@ -80,7 +102,7 @@ class TambolaTest {
         //act
         val ticket = Ticket(ticketValues)
         val booleanValue = game.validate(ticket, announcedNumbers, claim)
-        //
+        //assert
         assertFalse(booleanValue)
     }
 

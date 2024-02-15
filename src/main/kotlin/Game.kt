@@ -25,6 +25,18 @@ class Game {
             }
             return false
         }
+        else if(claim == "Middle Row") {
+            announcedNumbers.forEach() { announceValue ->
+                var ticketMatrix = iterateThrough(ticket, announceValue)
+                if (ticketMatrix[ticketMatrix.size-2].size == 0) {
+                    if (announcedNumbers.indexOf(announceValue) == announcedNumbers.size - 1)
+                        return true
+                    else
+                        return false
+                }
+            }
+            return false
+        }
         else if(claim == "Early 5") {
             var count = 0
             announcedNumbers.forEach() {announceValue->
