@@ -62,7 +62,25 @@ class Game {
         }
         return ticketMatrix
     }
+    fun iterate(ticket: Ticket, announceValue: Int): Int{
+        val ticketMatrix = ticket.ticketVal
+        val numberOfRows = ticket.ticketVal.size
+        for (rowNumber in 0..<numberOfRows)
+        {
+            var numberOfColumns = ticketMatrix[rowNumber].size
+            for(columnNumber in 0..<numberOfColumns)
+            {
+                if(ticketMatrix[rowNumber][columnNumber] == announceValue)
+                {
+                    ticketMatrix[rowNumber].remove(announceValue)
+                    return  1
 
-    
+                }
+
+            }
+        }
+        return 0
+    }
+
 
 }

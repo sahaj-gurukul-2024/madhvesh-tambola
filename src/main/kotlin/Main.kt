@@ -6,8 +6,8 @@ fun main()
         mutableListOf(9, 25, 56, 64, 83)
     )
     val ticket = Ticket(ticketValues)
-    val announcedNumbers = listOf(90, 4, 46, 63, 89, 16, 76, 48, 12)
-    val claim = "Top Row"
+    val announcedNumbers = listOf(4, 23, 48, 63, 76, 90)
+    val claim = "Early 5"
     val game = Game()
     println(game.validate(ticket, announcedNumbers, claim))
 }
