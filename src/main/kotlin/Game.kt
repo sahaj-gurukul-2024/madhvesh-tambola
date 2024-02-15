@@ -38,33 +38,26 @@ class Game {
                 return false
             }
             "Full House" -> {
-                var count = 0
-                announcedNumbers.forEach() { announceValue ->
-                    count = count + iterate(ticket, announceValue)
-                    if (count == 15) {
-                        if (announcedNumbers.indexOf(announceValue) == announcedNumbers.size - 1)
-                            return true
-                        else
-                            return false
-                    }
-                }
-                return false
+                return earlyFiveFullHouseCheck(ticket, announcedNumbers, claim)
             }
             "Early 5" -> {
-                var count = 0
-                announcedNumbers.forEach() { announceValue ->
-                    count = count + iterate(ticket, announceValue)
-                    if (count == 5) {
-                        if (announcedNumbers.indexOf(announceValue) == announcedNumbers.size - 1)
-                            return true
-                        else
-                            return false
-                    }
-                }
-                return false
+                 return earlyFiveFullHouseCheck(ticket, announcedNumbers, claim)
             }
             else -> return false
         }
+    }
+    private fun earlyFiveFullHouseCheck(ticket: Ticket, announcedNumbers: List<Int>, claim: String):Boolean{
+        var count = 0
+        announcedNumbers.forEach() { announceValue ->
+            count = count + iterate(ticket, announceValue)
+            if ((count == 5 && claim == "Early 5") || (count == 15 && claim == "Full House") ) {
+                if (announcedNumbers.indexOf(announceValue) == announcedNumbers.size - 1)
+                    return true
+                else
+                    return false
+            }
+        }
+        return false
     }
     private fun iterateThrough(ticket: Ticket, announceValue: Int): MutableList<MutableList<Int>> {
         val ticketMatrix = ticket.ticketVal
