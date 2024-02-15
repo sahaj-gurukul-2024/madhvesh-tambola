@@ -89,6 +89,30 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="TambolaTest.check for Full House claim as True in ticket" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;TambolaTest.check for Full House claim as True in ticket&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="TambolaTest.check for top row claim in ticket" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -122,6 +146,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.TambolaTest.check for Full House claim as True in ticket" />
         <item itemvalue="Gradle.TambolaTest.check for Early 5 row claim as False in ticket" />
         <item itemvalue="Gradle.TambolaTest.check for top row claim in ticket" />
         <item itemvalue="Kotlin.MainKt" />
