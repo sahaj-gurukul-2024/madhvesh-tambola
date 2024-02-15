@@ -6,4 +6,8 @@ fun main()
         listOf(9, 25, 56, 64, 83)
     )
     val ticket = Ticket(ticketValues)
+    val announcedNumbers = listOf(90, 4, 46, 63, 89, 16, 76, 48)
+    val claim = "Top Row"
+    val game = Game()
+    game.validate(ticket, announcedNumbers, claim)
 }
