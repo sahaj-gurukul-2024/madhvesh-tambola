@@ -53,7 +53,7 @@
     "last_opened_file_path": "/Users/madhveshs/Documents/Tambola"
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.TambolaTest.check for Early 5 row claim as True in ticket">
+  <component name="RunManager">
     <configuration name="TambolaTest.check for Early 5 row claim as False in ticket" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
