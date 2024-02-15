@@ -42,7 +42,6 @@ class Game {
         else
             return false
     }
-
     fun iterateThrough(ticket: Ticket, announceValue: Int): MutableList<MutableList<Int>>{
         val ticketMatrix = ticket.ticketVal
         val numberOfRows = ticket.ticketVal.size
@@ -81,6 +80,4 @@ class Game {
         }
         return 0
     }
-
-
 }
