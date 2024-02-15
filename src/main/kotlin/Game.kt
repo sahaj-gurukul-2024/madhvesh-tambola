@@ -1,14 +1,32 @@
 class Game {
     fun validate(ticket: Ticket, announcedNumbers: List<Int>, claim: String): Boolean
     {
-        announcedNumbers.forEach() {announceValue ->
-            var ticketMatrix = iterateThrough(ticket, announceValue)
-            if(ticketMatrix[0].size == 0 && announcedNumbers.indexOf(announceValue) == announcedNumbers.size-1)
-            {
-                return true
+        if(claim == "Top Row") {
+            announcedNumbers.forEach() { announceValue ->
+                var ticketMatrix = iterateThrough(ticket, announceValue)
+                if (ticketMatrix[0].size == 0) {
+                    if (announcedNumbers.indexOf(announceValue) == announcedNumbers.size - 1)
+                        return true
+                    else
+                        return false
+                }
             }
+            return false
         }
-        return false
+        else if(claim == "Bottom Row") {
+            announcedNumbers.forEach() { announceValue ->
+                var ticketMatrix = iterateThrough(ticket, announceValue)
+                if (ticketMatrix[ticketMatrix.size-1].size == 0) {
+                    if (announcedNumbers.indexOf(announceValue) == announcedNumbers.size - 1)
+                        return true
+                    else
+                        return false
+                }
+            }
+            return false
+        }
+        else
+            return false
     }
 
     fun iterateThrough(ticket: Ticket, announceValue: Int): MutableList<MutableList<Int>>{
