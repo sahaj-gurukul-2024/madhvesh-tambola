@@ -1,12 +1,17 @@
 class Game {
-    fun validate(ticket: Ticket, announcedNumbers: List<Int>, claim: String)
+    fun validate(ticket: Ticket, announcedNumbers: List<Int>, claim: String): Boolean
     {
         announcedNumbers.forEach() {announceValue ->
-            iterateThrough(ticket, announceValue)
+            var ticketMatrix = iterateThrough(ticket, announceValue)
+            if(ticketMatrix[0].size == 0 && announcedNumbers.indexOf(announceValue) == announcedNumbers.size-1)
+            {
+                return true
+            }
         }
+        return false
     }
 
-    fun iterateThrough(ticket: Ticket, announceValue: Int) {
+    fun iterateThrough(ticket: Ticket, announceValue: Int): MutableList<MutableList<Int>>{
         val ticketMatrix = ticket.ticketVal
         val numberOfRows = ticket.ticketVal.size
         for (rowNumber in 0..<numberOfRows)
@@ -16,11 +21,14 @@ class Game {
             {
                 if(ticketMatrix[rowNumber][columnNumber] == announceValue)
                 {
-                    ticketMatrix.
+                    ticketMatrix[rowNumber].remove(announceValue)
+                    return  ticketMatrix
+
                 }
 
             }
         }
+        return ticketMatrix
     }
 
 }

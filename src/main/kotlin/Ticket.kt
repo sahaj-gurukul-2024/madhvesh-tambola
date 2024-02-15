@@ -1,3 +1,3 @@
-class Ticket(ticketValues: List<List<Int>>) {
+class Ticket(ticketValues: MutableList<MutableList<Int>>) {
     val ticketVal = ticketValues
 }
