@@ -2,51 +2,38 @@ class Game {
     fun validate(ticket: Ticket, announcedNumbers: List<Int>, claim: String): Boolean {
         when (claim) {
             "Top Row" -> {
-                announcedNumbers.forEach() { announceValue ->
-                    var ticketMatrix = iterateThrough(ticket, announceValue)
-                    if (ticketMatrix[0].size == 0) {
-                        if (announcedNumbers.indexOf(announceValue) == announcedNumbers.size - 1)
-                            return true
-                        else
-                            return false
-                    }
-                }
-                return false
-            }
-            "Bottom Row" -> {
-                announcedNumbers.forEach() { announceValue ->
-                    var ticketMatrix = iterateThrough(ticket, announceValue)
-                    if (ticketMatrix[ticketMatrix.size - 1].size == 0) {
-                        if (announcedNumbers.indexOf(announceValue) == announcedNumbers.size - 1)
-                            return true
-                        else
-                            return false
-                    }
-                }
-                return false
+                return validateRow(announcedNumbers, ticket,0)
             }
             "Middle Row" -> {
-                announcedNumbers.forEach() { announceValue ->
-                    var ticketMatrix = iterateThrough(ticket, announceValue)
-                    if (ticketMatrix[ticketMatrix.size - 2].size == 0) {
-                        if (announcedNumbers.indexOf(announceValue) == announcedNumbers.size - 1)
-                            return true
-                        else
-                            return false
-                    }
-                }
-                return false
+                return validateRow(announcedNumbers,ticket,1)
+            }
+            "Bottom Row" -> {
+                return validateRow(announcedNumbers,ticket,2)
             }
             "Full House" -> {
-                return earlyFiveFullHouseCheck(ticket, announcedNumbers, claim)
+                return countFunction(ticket, announcedNumbers, claim)
             }
             "Early 5" -> {
-                 return earlyFiveFullHouseCheck(ticket, announcedNumbers, claim)
+                 return countFunction(ticket, announcedNumbers, claim)
             }
             else -> return false
         }
     }
-    private fun earlyFiveFullHouseCheck(ticket: Ticket, announcedNumbers: List<Int>, claim: String):Boolean{
+
+    private fun validateRow(announcedNumbers: List<Int>, ticket: Ticket,rowNumber: Int): Boolean {
+        announcedNumbers.forEach() { announceValue ->
+            var ticketMatrix = iterateThrough(ticket, announceValue)
+            if (ticketMatrix[rowNumber].size == 0) {
+                if (announcedNumbers.indexOf(announceValue) == announcedNumbers.size - 1)
+                    return true
+                else
+                    return false
+            }
+        }
+        return false
+    }
+
+    private fun countFunction(ticket: Ticket, announcedNumbers: List<Int>, claim: String):Boolean{
         var count = 0
         announcedNumbers.forEach() { announceValue ->
             count = count + iterate(ticket, announceValue)
